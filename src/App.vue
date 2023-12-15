@@ -1,6 +1,10 @@
 <template>
-  <van-calendar :allow-same-day="true" :min-date="minDate" :max-date="maxDate" :show-confirm="false" title="摸鱼摸鱼🦑"
-    :poppable="false" type="range" @confirm="onConfirm" :formatter="formatter" />
+  <van-calendar :show-subtitle="true" :allow-same-day="true" :min-date="minDate" :max-date="maxDate" :show-confirm="false"
+    title="摸鱼摸鱼🦑" :poppable="false" type="range" @confirm="onConfirm" :formatter="formatter">
+    <template #month-title="item">
+      <div>{{ getMonthTitle(item) }}</div>
+    </template>
+  </van-calendar>
 
   <van-back-top right="1vw" bottom="2vh" />
 </template>
@@ -50,9 +54,14 @@ export default {
       });
     };
 
+    const getMonthTitle = ({ text, date }: { text: string, date: Date }) => {
+      return text
+    };
+
     return {
       formatter,
       onConfirm,
+      getMonthTitle,
       minDate: new Date(2023, 11, today),
       maxDate: new Date(2024, 11, 31),
     };
