@@ -1,6 +1,8 @@
 <template>
   <van-calendar :allow-same-day="true" :min-date="minDate" :max-date="maxDate" :show-confirm="false" title="摸鱼摸鱼🦑"
     :poppable="false" type="range" @confirm="onConfirm" :formatter="formatter" />
+
+  <van-back-top right="1vw" bottom="2vh" />
 </template>
 
 <script lang="ts">
