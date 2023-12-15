@@ -1,27 +1,23 @@
 /* 调休加班 */
 .overtime {
-  background: rgba(255, 0, 0, 0.5); /* deep red */
+  background: #ff000063;
   border-radius: var(--van-radius-md);
 }
 
 /* 休息 */
 .vacation {
-  background: rgba(156, 214, 255, 0.636);
+  background: #00b8ff52;
   border-radius: var(--van-radius-md);
   margin-bottom: var(--van-calendar-day-margin-bottom);
 }
 
 /* 请假 */
 .leave {
-  background: rgba(66, 235, 54, 0.5);
+  background: #11ff0042;
   border-radius: var(--van-radius-md);
 }
 
 /* 调休时请假 */
 .overtime-leave {
-  background: linear-gradient(
-    45deg,
-    rgba(255, 0, 0, 0.5) 20%,
-    rgba(66, 235, 54, 0.5) 80%
-  );
+  background: linear-gradient(45deg, #ff000063 20%, #11ff0042 80%);
 }
