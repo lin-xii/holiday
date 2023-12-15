@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts">
-import { CalendarDayItem } from 'vant';
+import { CalendarDayItem, showNotify } from 'vant';
 import * as dayjs from "dayjs";
 import { handleWeekend, handleHoliday, handleVacation, handleOvertime, handleLeave } from './util';
 
@@ -40,7 +40,12 @@ export default {
 
     const onConfirm = (values: Date[]) => {
       const [start, end] = values;
-      console.debug(start, end)
+      const rest = dayjs(end).diff(dayjs(start), 'day') + 1;
+      showNotify({
+        type: "primary",
+        duration: 10000,
+        message: `${dayjs(start).format('YYYY-MM-DD')} ～ ${dayjs(end).format('YYYY-MM-DD')}，摸鱼${rest}天`,
+      });
     };
 
     return {
