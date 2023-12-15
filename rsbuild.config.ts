@@ -6,4 +6,7 @@ export default defineConfig({
   output: {
     assetPrefix: "./",
   },
+  html: {
+    title: "假期膨胀日历",
+  },
 });
