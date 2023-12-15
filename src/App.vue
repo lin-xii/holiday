@@ -1,6 +1,6 @@
 <template>
-  <van-calendar :min-date="minDate" :max-date="maxDate" :show-confirm="false" title="日历" :poppable="false" type="range"
-    @confirm="onConfirm" :formatter="formatter" />
+  <van-calendar :allow-same-day="true" :min-date="minDate" :max-date="maxDate" :show-confirm="false" title="日历"
+    :poppable="false" type="range" @confirm="onConfirm" :formatter="formatter" />
 </template>
 
 <script lang="ts">
