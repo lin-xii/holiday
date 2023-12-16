@@ -1,3 +1,5 @@
+/*! #__NO_SIDE_EFFECTS__ */
+
 /*! @vue/shared */
 
 /*! #__NO_SIDE_EFFECTS__ */
@@ -10,10 +12,8 @@
 
 /*! #__NO_SIDE_EFFECTS__ */
 
-/*! @vue/reactivity */
-
 /*! @vue/shared */
 
-/*! @vue/runtime-core */
+/*! @vue/reactivity */
 
-/*! #__NO_SIDE_EFFECTS__ */
+/*! @vue/runtime-core */
