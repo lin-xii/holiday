@@ -1,5 +1,11 @@
 import { CalendarDayItem } from "vant";
-import { holidayMap, vacationMap, overtimeMap, leaveMap } from "./data";
+import {
+  holidayMap,
+  vacationMap,
+  overtimeMap,
+  leaveMap,
+  YearMap,
+} from "./data";
 
 export {
   handleWeekend,
@@ -7,6 +13,7 @@ export {
   handleVacation,
   handleOvertime,
   handleLeave,
+  extractHolidays,
 };
 
 interface handlerProps {
@@ -71,4 +78,20 @@ function addOvertime(day: CalendarDayItem) {
 function addLeave(day: CalendarDayItem) {
   day.topInfo = day.topInfo ? day.topInfo + "/请假" : "请假";
   day.className = day.className ? "overtime-leave" : "leave";
+}
+
+function extractHolidays(holidayMap: YearMap) {
+  const result: number[] = [];
+
+  for (const year in holidayMap) {
+    const monthMap = holidayMap[year];
+    for (const month in monthMap) {
+      const dayMap = monthMap[month];
+      for (const day in dayMap) {
+        result.push(new Date(`${year}-${month}-${day}`).getTime());
+      }
+    }
+  }
+
+  return result;
 }

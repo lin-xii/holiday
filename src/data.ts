@@ -2,7 +2,7 @@ export { holidayMap, vacationMap, overtimeMap, leaveMap };
 
 interface Holiday {
   name: string;
-  tip?: string;
+  tip: string;
 }
 
 interface DayMap {
@@ -13,7 +13,7 @@ interface MonthMap {
   [month: number]: DayMap;
 }
 
-interface YearMap {
+export interface YearMap {
   [year: number]: MonthMap;
 }
 
@@ -23,47 +23,47 @@ const holidayMap: YearMap = {
     1: {
       1: {
         name: "元旦",
-        tip: "请4休3连2=9天",
+        tip: "9天：请4休3连2",
       },
     },
     2: {
       9: {
         name: "除夕",
-        tip: "",
+        tip: "希望能放假🙄",
       },
       10: {
         name: "春节",
-        tip: "请6休8连2=16天",
+        tip: "16天：请6休8连2",
       },
     },
     4: {
       4: {
         name: "清明",
-        tip: "请3休3连2=8天",
+        tip: "8天：请3休3连2",
       },
     },
     5: {
       1: {
         name: "劳动",
-        tip: "请3休5连1=9天",
+        tip: "9天：请3休5连1",
       },
     },
     6: {
       10: {
         name: "端午",
-        tip: "请4休3连2=9天",
+        tip: "9天：请4休3连2",
       },
     },
     9: {
       17: {
         name: "中秋",
-        tip: "请3休3连2=8天",
+        tip: "8天：请3休3连2",
       },
     },
     10: {
       1: {
         name: "国庆",
-        tip: "请2休7连1=10天",
+        tip: "10天：请2休7连1",
       },
     },
   },

@@ -8,7 +8,8 @@
 <script lang="ts">
 import { CalendarDayItem, showNotify } from 'vant';
 import * as dayjs from "dayjs";
-import { handleWeekend, handleHoliday, handleVacation, handleOvertime, handleLeave } from './util';
+import { handleWeekend, handleHoliday, handleVacation, handleOvertime, handleLeave, extractHolidays } from './util';
+import { holidayMap } from './data';
 
 export default {
   setup() {
@@ -42,11 +43,23 @@ export default {
 
     const onConfirm = (values: Date[]) => {
       const [start, end] = values;
-      const rest = dayjs(end).diff(dayjs(start), 'day') + 1;
+      const restDays = dayjs(end).diff(dayjs(start), 'day') + 1;
+      let message = `摸鱼${restDays}天`;
+
+      extractHolidays(holidayMap).forEach(time => {
+        if (time >= start.getTime() && time <= end.getTime()) {
+          const date = new Date(time)
+          const holiday = holidayMap[date.getFullYear()][date.getMonth() + 1][date.getDate()]
+          if (holiday.name && holiday.tip) {
+            message = `${holiday.name}${holiday.tip}` + "\n" + message;
+          }
+        }
+      });
+
       showNotify({
         type: "primary",
-        duration: 10000,
-        message: `${dayjs(start).format('YYYY-MM-DD')} ～ ${dayjs(end).format('YYYY-MM-DD')}，摸鱼${rest}天`,
+        duration: 3000,
+        message,
       });
     };
 
