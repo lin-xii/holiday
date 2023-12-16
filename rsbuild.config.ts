@@ -8,5 +8,6 @@ export default defineConfig({
   },
   html: {
     title: "假期膨胀日历",
+    favicon: "./favicon.ico",
   },
 });
