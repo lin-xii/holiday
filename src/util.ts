@@ -28,7 +28,7 @@ function handleWeekend(day: CalendarDayItem) {
 }
 
 function handleHoliday({ day, year, month, date }: handlerProps) {
-  const holiday = holidayMap[year]?.[month]?.[date]?.holiday;
+  const holiday = holidayMap[year]?.[month]?.[date]?.name;
   if (holiday) {
     addVacation(day, holiday);
   }

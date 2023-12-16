@@ -1,51 +1,68 @@
 export { holidayMap, vacationMap, overtimeMap, leaveMap };
 
-const holidayMap: Record<number, any> = {
+interface Holiday {
+  name: string;
+  tip?: string;
+}
+
+interface DayMap {
+  [day: number]: Holiday;
+}
+
+interface MonthMap {
+  [month: number]: DayMap;
+}
+
+interface YearMap {
+  [year: number]: MonthMap;
+}
+
+const holidayMap: YearMap = {
   2023: {},
   2024: {
     1: {
       1: {
-        holiday: "元旦",
+        name: "元旦",
         tip: "请4休3连2=9天",
       },
     },
     2: {
       9: {
-        holiday: "除夕",
+        name: "除夕",
         tip: "",
       },
       10: {
-        holiday: "春节",
+        name: "春节",
         tip: "请6休8连2=16天",
       },
     },
     4: {
       4: {
-        holiday: "清明",
+        name: "清明",
         tip: "请3休3连2=8天",
       },
     },
     5: {
       1: {
-        holiday: "劳动",
+        name: "劳动",
         tip: "请3休5连1=9天",
       },
     },
     6: {
       10: {
-        holiday: "端午",
+        name: "端午",
         tip: "请4休3连2=9天",
       },
     },
     9: {
       17: {
-        holiday: "中秋",
+        name: "中秋",
         tip: "请3休3连2=8天",
       },
     },
     10: {
       1: {
-        holiday: "国庆",
+        name: "国庆",
         tip: "请2休7连1=10天",
       },
     },
