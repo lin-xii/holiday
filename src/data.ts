@@ -99,3 +99,14 @@ const leaveMap: Record<number, any> = {
     9: [18, 19, 20, 29, 30],
   },
 };
+
+// TODO：替换复杂的数据结构
+const holidaysMap = [
+  {
+    "2024-01-01": {
+      holiday: "元旦",
+      tip: "9天：请4休3连2",
+      type: "休",
+    },
+  },
+];
