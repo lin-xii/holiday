@@ -88,7 +88,11 @@ function extractHolidays(holidayMap: YearMap) {
     for (const month in monthMap) {
       const dayMap = monthMap[month];
       for (const day in dayMap) {
-        result.push(new Date(`${year}-${month}-${day}`).getTime());
+        result.push(
+          new Date(
+            `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`
+          ).getTime()
+        );
       }
     }
   }
