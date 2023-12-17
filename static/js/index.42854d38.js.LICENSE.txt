@@ -1,28 +1,32 @@
 /*! vant */
 
-/*! core-js/modules/es.array.includes.js */
-
-/*! vant */
-
 /*! core-js/modules/esnext.iterator.constructor.js */
+
+/*! ./App.vue */
+
+/*! ./index.css */
+
+/*! vue */
 
 /*! core-js/modules/esnext.iterator.for-each.js */
 
-/*! vant/es/back-top/style */
+/*! ./data */
 
 /*! ./App.vue.ts?vue&type=script&lang=ts!=!../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./App.vue?vue&type=script&lang=ts */
 
-/*! vant/es/calendar/style */
+/*! core-js/modules/es.array.push.js */
+
+/*! vant/es/notify/style */
 
 /*! ./App.vue.ts?vue&type=script&lang=ts!=!-!builtin:swc-loader??clonedRuleSet-28.use[0]!../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./App.vue?vue&type=script&lang=ts */
 
 /*! core-js/modules/esnext.async-iterator.for-each.js */
 
-/*! ./App.vue */
+/*! vant */
+
+/*! core-js/modules/es.array.includes.js */
 
 /*! ./App.vue.ts?vue&type=template&id=338eae60&ts=true!=!-!builtin:swc-loader??clonedRuleSet-28.use[0]!../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[14].use[0]!../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./App.vue?vue&type=template&id=338eae60&ts=true */
-
-/*! ./index.css */
 
 /*! ./App.vue.ts?vue&type=template&id=338eae60&ts=true!=!../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./App.vue?vue&type=template&id=338eae60&ts=true */
 
@@ -30,7 +34,7 @@
 
 /*! vue */
 
-/*! vue */
+/*! vant/es/back-top/style */
 
 /*! dayjs */
 
@@ -38,8 +42,4 @@
 
 /*! ./util */
 
-/*! ./data */
-
-/*! core-js/modules/es.array.push.js */
-
-/*! vant/es/notify/style */
+/*! vant/es/calendar/style */
